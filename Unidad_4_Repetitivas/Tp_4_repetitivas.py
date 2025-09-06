@@ -112,3 +112,23 @@
 #poder procesar 100 números cambiando solo un valor).
 
 
+#contador = 0
+#suma = 0
+
+#for contador in range (0,101):
+#    num = int(input("Ingrese 100 numeros enteros: "))
+#    suma = suma + num
+#    contador = contador + 1
+
+#media = suma / contador
+
+#print("La media de esos valores es: ", media)
+
+#10) Escribe un programa que invierta el orden de los dígitos de un número ingresado por el 
+#usuario. Ejemplo: si el usuario ingresa 547, el programa debe mostrar 745. 
+
+num = input("Ingrese un numero entero: ")
+
+invertido = "".join(reversed(num))
+
+print("El numero invertido es: ",invertido)
