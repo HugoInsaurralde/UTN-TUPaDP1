@@ -119,15 +119,74 @@
 #• Calcular el promedio de las mínimas y el de las máximas. 
 #• Mostrar en qué día se registró la mayor amplitud térmica. 
 
+#temperaturas = [
+#    [8,12],
+#    [10,18],
+#    [9,15],
+#    [10,20],
+#    [12,24],
+#    [11,22],
+#    [10,19]
+#]
+#suma_min = 0
+#suma_max = 0
+#mayor_ampl = 0
+#dia_mayor_ampl = 0
+#for dia in temperaturas:
+#    suma_min+= dia[0]
+#    suma_max+= dia[1]
+#
+#promedio_min = suma_min / len(temperaturas)
+#promedio_max = suma_max / len(temperaturas)
+#
+#for i,dia in enumerate(temperaturas, start=1):
+#    amplitud = dia[1] - dia[0]
+#    if amplitud > mayor_ampl:
+#        mayor_ampl = amplitud
+#        dia_mayor_ampl = i
+#
+#print("---------------------------------------------------------------------------------------------------")
+#print("El promedio de temperatura minima de la semana es de: ", promedio_min )
+#print("El promedio de temperatura maxima de la semana es de: ", promedio_max )
+#print("---------------------------------------------------------------------------------------------------")
+#print(f"El dia que se registro mayor amplitud termica fue el dia: {dia_mayor_ampl} con una amplitud de: {mayor_ampl}")
+#print("---------------------------------------------------------------------------------------------------")
 
 #8) Crear una matriz con las notas de 5 estudiantes en 3 materias. 
 #• Mostrar el promedio de cada estudiante. 
 #• Mostrar el promedio de cada materia. 
+
+#estudiantes = ["Laura", "Sofia", "Mauro", "Lucas", "Hugo"]
+#notas = [[7,9,10],[10,8,10],[7,8,9],[7,6,7],[10,10,10]]
+#
+#for i,nombres in enumerate(estudiantes):
+#    promedio = (notas[i][0] + notas[i][1] + notas[i][2]) / len(notas[i])
+#    print(f"el prodedio de: {estudiantes[i]} es: {promedio}")
+#
+#suma_materia1 = notas[0][0] + notas[1][0] + notas[2][0] + notas[3][0] + notas[4][0]
+#suma_materia2 = notas[1][1] + notas[1][1] + notas[2][1] + notas[3][1] + notas[4][1]
+#suma_materia3 = notas[0][2] + notas[1][2] + notas[2][2] + notas[3][2] + notas[4][2]
+#promedio_1 = suma_materia1 / len(notas[0])
+#promedio_2 = suma_materia2 / len(notas[0])
+#promedio_3 = suma_materia3 / len(notas[0])
+#
+#print(f"El promedio de la primer materia es: {promedio_1} de la segunda es {promedio_2} y de la tercera es {promedio_3}")
+
+
 #9) Representar un tablero de Ta-Te-Ti como una lista de listas (3x3). 
 #• Inicializarlo con guiones "-" representando casillas vacías. 
 #• Permitir que dos jugadores ingresen posiciones (fila, columna) para colocar "X" o "O". 
-#• Mostrar el tablero después de cada jugada. 
+#• Mostrar el tablero después de cada jugada.
+
+tablero = [
+    ["-","-","-"],
+    ["-","-","-"],
+    ["-","-","-"]
+    ]
+
+print(tablero)
+
 #10) Una tienda registra las ventas de 4 productos durante 7 días, en una matriz de 4x7. 
 #• Mostrar el total vendido por cada producto. 
 #• Mostrar el día con mayores ventas totales. 
-#• Indicar cuál fue el producto más vendido en la semana. 
+#• Indicar cuál fue el producto más vendido en la semana.
