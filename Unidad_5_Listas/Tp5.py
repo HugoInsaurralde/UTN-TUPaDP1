@@ -156,21 +156,21 @@
 #• Mostrar el promedio de cada estudiante. 
 #• Mostrar el promedio de cada materia. 
 
-#estudiantes = ["Laura", "Sofia", "Mauro", "Lucas", "Hugo"]
-#notas = [[7,9,10],[10,8,10],[7,8,9],[7,6,7],[10,10,10]]
-#
-#for i,nombres in enumerate(estudiantes):
-#    promedio = (notas[i][0] + notas[i][1] + notas[i][2]) / len(notas[i])
-#    print(f"el prodedio de: {estudiantes[i]} es: {promedio}")
-#
-#suma_materia1 = notas[0][0] + notas[1][0] + notas[2][0] + notas[3][0] + notas[4][0]
-#suma_materia2 = notas[1][1] + notas[1][1] + notas[2][1] + notas[3][1] + notas[4][1]
-#suma_materia3 = notas[0][2] + notas[1][2] + notas[2][2] + notas[3][2] + notas[4][2]
-#promedio_1 = suma_materia1 / len(notas[0])
-#promedio_2 = suma_materia2 / len(notas[0])
-#promedio_3 = suma_materia3 / len(notas[0])
-#
-#print(f"El promedio de la primer materia es: {promedio_1} de la segunda es {promedio_2} y de la tercera es {promedio_3}")
+# estudiantes = ["Laura", "Sofia", "Mauro", "Lucas", "Hugo"]
+# notas = [[7,9,10],[10,8,10],[7,8,9],[7,6,7],[10,10,10]]
+
+# for i,nombres in enumerate(estudiantes):
+#     promedio = (notas[i][0] + notas[i][1] + notas[i][2]) / len(notas[i])
+#     print(f"el prodedio de: {estudiantes[i]} es: {promedio}")
+
+# suma_materia1 = notas[0][0] + notas[1][0] + notas[2][0] + notas[3][0] + notas[4][0]
+# suma_materia2 = notas[1][1] + notas[1][1] + notas[2][1] + notas[3][1] + notas[4][1]
+# suma_materia3 = notas[0][2] + notas[1][2] + notas[2][2] + notas[3][2] + notas[4][2]
+# promedio_1 = suma_materia1 / len(notas[0])
+# promedio_2 = suma_materia2 / len(notas[0])
+# promedio_3 = suma_materia3 / len(notas[0])
+
+# print(f"El promedio de la primer materia es: {promedio_1} de la segunda es {promedio_2} y de la tercera es {promedio_3}")
 
 
 #9) Representar un tablero de Ta-Te-Ti como una lista de listas (3x3). 
@@ -182,11 +182,50 @@ tablero = [
     ["-","-","-"],
     ["-","-","-"],
     ["-","-","-"]
-    ]
+]
+turno = "X"
+movimiento = 0
 
-print(tablero)
+while movimiento < 9:
+    print("  1 2 3")
+    for i in range(3):
+        print(f"{i+1} {tablero[i][0]} {tablero[i][1]} {tablero[i][2]}")
+    print()
+    try:
+        fila = int(input(f"Jugador {turno} Ingrese el numero de fila (1, 2, 3)"))
+        columna = int(input(f"Jugador {turno} Ingrese el numero de columna (1, 2, 3)"))
+    except ValueError:
+        print("Usted agrego un caracter invalido por favor intente de nuevo\n")
+        continue
+    if fila < 1 or fila > 3 or columna < 1 or columna > 3:
+        print("Usted agrego un rango invalido por favor intente de nuevo\n")
+        continue
+    
+    fila = fila -1
+    columna = columna - 1
+    
+    if tablero[fila][columna] != "-":
+        print("Casillero ocupado por favor ingrese otro.\n")
+        continue
+    tablero[fila][columna] = turno
+    movimiento += 1
+    
+    if turno == "X":
+        turno = "O"
+    else:
+        turno = "X"
 
 #10) Una tienda registra las ventas de 4 productos durante 7 días, en una matriz de 4x7. 
 #• Mostrar el total vendido por cada producto. 
 #• Mostrar el día con mayores ventas totales. 
 #• Indicar cuál fue el producto más vendido en la semana.
+
+# productos = [
+#     [],
+#     [],
+#     [],
+#     [],
+#     [],
+#     [],
+#     []
+# ]
