@@ -220,12 +220,18 @@ while movimiento < 9:
 #• Mostrar el día con mayores ventas totales. 
 #• Indicar cuál fue el producto más vendido en la semana.
 
-# productos = [
-#     [],
-#     [],
-#     [],
-#     [],
-#     [],
-#     [],
-#     []
-# ]
+productos = [
+    [10, 15, 11, 8, 13, 7, 12], # Producto 1
+    [6, 20, 13, 10, 14, 12, 15], # Producto 2
+    [13, 12, 9, 12, 18 , 8, 10], # Producto 3
+    [15, 20, 22, 6, 9, 7, 12] # Producto 4
+]
+
+dias_de_la_semana = ["Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo"]
+dia_mayor_ventas = ""
+
+producto_1 = sum(productos[0])
+producto_2 = sum(productos[1])
+producto_3 = sum(productos[2])
+producto_4 = sum(productos[3])
+
