@@ -178,60 +178,77 @@
 #• Permitir que dos jugadores ingresen posiciones (fila, columna) para colocar "X" o "O". 
 #• Mostrar el tablero después de cada jugada.
 
-tablero = [
-    ["-","-","-"],
-    ["-","-","-"],
-    ["-","-","-"]
-]
-turno = "X"
-movimiento = 0
-
-while movimiento < 9:
-    print("  1 2 3")
-    for i in range(3):
-        print(f"{i+1} {tablero[i][0]} {tablero[i][1]} {tablero[i][2]}")
-    print()
-    try:
-        fila = int(input(f"Jugador {turno} Ingrese el numero de fila (1, 2, 3)"))
-        columna = int(input(f"Jugador {turno} Ingrese el numero de columna (1, 2, 3)"))
-    except ValueError:
-        print("Usted agrego un caracter invalido por favor intente de nuevo\n")
-        continue
-    if fila < 1 or fila > 3 or columna < 1 or columna > 3:
-        print("Usted agrego un rango invalido por favor intente de nuevo\n")
-        continue
-    
-    fila = fila -1
-    columna = columna - 1
-    
-    if tablero[fila][columna] != "-":
-        print("Casillero ocupado por favor ingrese otro.\n")
-        continue
-    tablero[fila][columna] = turno
-    movimiento += 1
-    
-    if turno == "X":
-        turno = "O"
-    else:
-        turno = "X"
+#tablero = [
+#    ["-","-","-"],
+#    ["-","-","-"],
+#    ["-","-","-"]
+#]
+#turno = "X"
+#movimiento = 0
+#
+#while movimiento < 9:
+#    print("  1 2 3")
+#    for i in range(3):
+#        print(f"{i+1} {tablero[i][0]} {tablero[i][1]} {tablero[i][2]}")
+#    print()
+#    try:
+#        fila = int(input(f"Jugador {turno} Ingrese el numero de fila (1, 2, 3)"))
+#        columna = int(input(f"Jugador {turno} Ingrese el numero de columna (1, 2, 3)"))
+#    except ValueError:
+#        print("Usted agrego un caracter invalido por favor intente de nuevo\n")
+#        continue
+#    if fila < 1 or fila > 3 or columna < 1 or columna > 3:
+#        print("Usted agrego un rango invalido por favor intente de nuevo\n")
+#        continue
+#    
+#    fila = fila -1
+#    columna = columna - 1
+#    
+#    if tablero[fila][columna] != "-":
+#        print("Casillero ocupado por favor ingrese otro.\n")
+#        continue
+#    tablero[fila][columna] = turno
+#    movimiento += 1
+#    
+#    if turno == "X":
+#        turno = "O"
+#    else:
+#        turno = "X"
 
 #10) Una tienda registra las ventas de 4 productos durante 7 días, en una matriz de 4x7. 
 #• Mostrar el total vendido por cada producto. 
 #• Mostrar el día con mayores ventas totales. 
 #• Indicar cuál fue el producto más vendido en la semana.
 
-productos = [
-    [10, 15, 11, 8, 13, 7, 12], # Producto 1
-    [6, 20, 13, 10, 14, 12, 15], # Producto 2
-    [13, 12, 9, 12, 18 , 8, 10], # Producto 3
-    [15, 20, 22, 6, 9, 7, 12] # Producto 4
-]
+# productos = [
+#     [10, 15, 11, 8, 13, 7, 12], # Producto 1
+#     [6, 20, 13, 10, 14, 12, 15], # Producto 2
+#     [13, 12, 9, 12, 18 , 8, 10], # Producto 3
+#     [15, 20, 22, 6, 9, 7, 12] # Producto 4
+# ]
 
-dias_de_la_semana = ["Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo"]
-dia_mayor_ventas = ""
+# dias_de_la_semana = ["Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo"]
 
-producto_1 = sum(productos[0])
-producto_2 = sum(productos[1])
-producto_3 = sum(productos[2])
-producto_4 = sum(productos[3])
+# dia_mayor_ventas = 0.
+
+# producto_mas_vendido = 0
+
+# producto = 0
+# for i in range(4):
+#     total_producto = sum(productos[i])
+#     print(f"El total vendido del producto {i + 1} es: {total_producto}")
+
+# for i in range(7):
+#     total_dia = productos[0][i] + productos[1][i] + productos[2][i] + productos[3][i]
+#     if total_dia > dia_mayor_ventas:
+#         dia_mayor_ventas = total_dia
+#         dia = dias_de_la_semana[i]
+# print(f"El dia de mayores ventas fue el dia: {dia} con un total de: {dia_mayor_ventas} ventas")
+
+# for i in range(4):
+#     total_producto = sum(productos[i])
+#     if total_producto > producto_mas_vendido:
+#         producto_mas_vendido = total_producto
+#         producto = i + 1
+# print(f"El producto con mayor venta de la semana fue el producto: {producto} con un total de: {producto_mas_vendido}")
 
