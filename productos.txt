@@ -1,0 +1,4 @@
+Martillo,14500,10
+Tenaza,10500,6
+Pinza,9500,15
+Soplete,16500,14
