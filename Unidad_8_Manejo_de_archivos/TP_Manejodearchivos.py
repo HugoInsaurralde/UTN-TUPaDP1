@@ -127,56 +127,56 @@
 # productos, sobrescribir el archivo productos.txt escribiendo nuevamente todos los 
 # productos actualizados desde la lista. 
 
-productos = []
+# productos = []
 
-with open("productos.txt", "r") as archivo:
-    for linea in archivo:
-        linea = linea.strip()
-        if not linea:
-            continue
+# with open("productos.txt", "r") as archivo:
+#     for linea in archivo:
+#         linea = linea.strip()
+#         if not linea:
+#             continue
 
-        partes = linea.split(",")
-        if len(partes) != 3:
-            continue
+#         partes = linea.split(",")
+#         if len(partes) != 3:
+#             continue
 
-        nombre = partes[0]
-        precio = float(partes[1])
-        cantidad = int(partes[2])
+#         nombre = partes[0]
+#         precio = float(partes[1])
+#         cantidad = int(partes[2])
 
-        producto = {
-            "nombre": nombre,
-            "precio": precio,
-            "cantidad": cantidad
-        }
+#         producto = {
+#             "nombre": nombre,
+#             "precio": precio,
+#             "cantidad": cantidad
+#         }
 
-        productos.append(producto)
+#         productos.append(producto)
 
-print("Lista de productos cargada:\n")
-for producto in productos:
-    print(f"Producto: {producto['nombre']} | Precio: ${producto['precio']} | Cantidad: {producto['cantidad']}")
+# print("Lista de productos cargada:\n")
+# for producto in productos:
+#     print(f"Producto: {producto['nombre']} | Precio: ${producto['precio']} | Cantidad: {producto['cantidad']}")
 
-print("\n--- Actualizar producto ---")
-nombre_buscado = input("Ingrese el nombre del producto a modificar: ").strip()
-nuevo_precio = input("Ingrese el nuevo precio: ").strip()
-nueva_cantidad = input("Ingrese la nueva cantidad: ").strip()
+# print("\n--- Actualizar producto ---")
+# nombre_buscado = input("Ingrese el nombre del producto a modificar: ").strip()
+# nuevo_precio = input("Ingrese el nuevo precio: ").strip()
+# nueva_cantidad = input("Ingrese la nueva cantidad: ").strip()
 
-actualizado = False
+# actualizado = False
 
-for producto in productos:
-    if producto["nombre"].lower() == nombre_buscado.lower():
-        producto["precio"] = float(nuevo_precio)
-        producto["cantidad"] = int(nueva_cantidad)
-        actualizado = True
-        break
+# for producto in productos:
+#     if producto["nombre"].lower() == nombre_buscado.lower():
+#         producto["precio"] = float(nuevo_precio)
+#         producto["cantidad"] = int(nueva_cantidad)
+#         actualizado = True
+#         break
 
-if actualizado:
-    print("\n Producto actualizado correctamente.")
-else:
-    print("\n No se encontró el producto para actualizar.")
+# if actualizado:
+#     print("\n Producto actualizado correctamente.")
+# else:
+#     print("\n No se encontró el producto para actualizar.")
 
-with open("productos.txt", "w") as archivo:
-    for producto in productos:
-        linea = f"{producto['nombre']},{producto['precio']},{producto['cantidad']}\n"
-        archivo.write(linea)
+# with open("productos.txt", "w") as archivo:
+#     for producto in productos:
+#         linea = f"{producto['nombre']},{producto['precio']},{producto['cantidad']}\n"
+#         archivo.write(linea)
 
-print("\n Archivo productos.txt sobrescrito con los datos actualizados.")
+# print("\n Archivo productos.txt sobrescrito con los datos actualizados.")
